@@ -89,7 +89,7 @@ footer {
       
   let theText = myTextInput.value;
     document.cookie = "operating-system="+OSName;
-    document.cookie = "user-name="+theText;
+    document.cookie = "user-name="+theText.value;
     function alertCookie() {
   alert(document.cookie);
 }
