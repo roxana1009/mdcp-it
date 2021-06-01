@@ -96,4 +96,17 @@ footer {
 </footer>
 
 </body>
+  <script>
+    var OSName = "Unknown OS";
+  if (navigator.userAgent.indexOf("Win") != -1) OSName = "Windows";
+  if (navigator.userAgent.indexOf("Mac") != -1) OSName = "Macintosh";
+  if (navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
+  if (navigator.userAgent.indexOf("Android") != -1) OSName = "Android";
+  if (navigator.userAgent.indexOf("like Mac") != -1) OSName = "iOS";
+    document.cookie = "operating-system="+OSName;
+    function alertCookie() {
+  alert(document.cookie);
+}
+  </script>
+<body> <button onclick="alertCookie()">Show cookies</button> </body>
 </html>
