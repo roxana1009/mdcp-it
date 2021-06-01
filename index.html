@@ -74,6 +74,11 @@ footer {
 <header>
   <h2>Notă de informare</h2>
 </header>
+  <label for="name">Name (4 to 8 characters):</label>
+
+<input type="text" id="name" name="name" required
+       minlength="4" maxlength="8" size="10">
+
     <script>
     var OSName = "Unknown OS";
   if (navigator.userAgent.indexOf("Win") != -1) OSName = "Windows";
@@ -81,7 +86,10 @@ footer {
   if (navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
   if (navigator.userAgent.indexOf("Android") != -1) OSName = "Android";
   if (navigator.userAgent.indexOf("like Mac") != -1) OSName = "iOS";
+      
+  let theText = myTextInput.value;
     document.cookie = "operating-system="+OSName;
+    document.cookie = "user-name="+theText;
     function alertCookie() {
   alert(document.cookie);
 }
