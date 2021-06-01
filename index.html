@@ -78,7 +78,7 @@ footer {
 
 <input type="text" id="name" name="name" required
        minlength="4" maxlength="8" size="10">
-
+<br>
     <script>
     var OSName = "Unknown OS";
   if (navigator.userAgent.indexOf("Win") != -1) OSName = "Windows";
@@ -87,14 +87,21 @@ footer {
   if (navigator.userAgent.indexOf("Android") != -1) OSName = "Android";
   if (navigator.userAgent.indexOf("like Mac") != -1) OSName = "iOS";
       
-  let theText = myTextInput.value;
-    document.cookie = "operating-system="+OSName;
-    document.cookie = "user-name=roxana";
+      document.cookie = "operating-system="+OSName;
     function alertCookie() {
   alert(document.cookie);
 }
   </script>
-  <body>  <button onclick="alertCookie()">Check cookies</button> </body>
+  
+  <script> 
+      let theText = myTextInput.value;
+    document.cookie = "operating-system="+OSName;
+    function alertCookie() {
+  alert(document.cookie);
+    
+  </script>
+    
+  <body>  <button onclick="alertCookie()">Show ookies</button> </body>
  <br>
 <h2>Notă de informare</h2>
 <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
