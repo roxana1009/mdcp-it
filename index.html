@@ -70,6 +70,19 @@ footer {
 </header>
 <h2>Cookies</h2>
   <p> numele/id-ul utilizatorului & versiunea sistemului de operare </p>
+  Nume: <input type="text" id="nume"><br>  
+  <input type="button" value="Set Cookie" onclick="setCookie()">  
+  <script>  
+    function setCookie()  
+    {   
+        var nume="Nume="+ document.getElementById("nume").value;  
+        document.cookie=nume; }
+      function alertCookie() {
+      alert(document.cookie);
+} </script>
+  
+  <h2> Analiza de impact </h2>
+  <p>link  </p>
 <br>
     <script>
     var OSName = "Unknown OS";
